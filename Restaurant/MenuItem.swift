@@ -9,12 +9,12 @@
 import Foundation
 
 struct MenuItem: Codable {
-    var id: Int
-    var name: String
-    var detailText: String
-    var price: Double
-    var category: String
-    var estimatedPrepTime: Int
+    let id: Int
+    let name: String
+    let detailText: String
+    let price: Double
+    let category: String
+    let estimatedPrepTime: Int?
     
     enum CodingKeys: String, CodingKey {
         case id

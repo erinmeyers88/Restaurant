@@ -10,13 +10,34 @@ import UIKit
 
 class MenuItemViewController: UIViewController {
 
+    var menuItem: MenuItem!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var detailTextLabel: UILabel!
+    @IBOutlet weak var addToOrderButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        addToOrderButton.layer.cornerRadius = 5.0
+        updateUI()
     }
     
-
+    func updateUI() {
+        titleLabel.text = menuItem.name
+        priceLabel.text = String(format: "$%.2f", menuItem.price)
+        detailTextLabel.text = menuItem.detailText
+    }
+    
+    @IBAction func addToOrderButtonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.3) {
+            self.addToOrderButton.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+            self.addToOrderButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
