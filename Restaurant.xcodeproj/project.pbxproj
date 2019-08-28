@@ -21,6 +21,7 @@
 		F37090B82316CEB1009A2820 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37090B72316CEB1009A2820 /* MenuItem.swift */; };
 		F37090BA2316CFBE009A2820 /* IntermediateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37090B92316CFBE009A2820 /* IntermediateModels.swift */; };
 		F37090BC2316D024009A2820 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37090BB2316D024009A2820 /* Order.swift */; };
+		F37090BE2316D09C009A2820 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37090BD2316D09C009A2820 /* MenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		F37090B72316CEB1009A2820 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		F37090B92316CFBE009A2820 /* IntermediateModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateModels.swift; sourceTree = "<group>"; };
 		F37090BB2316D024009A2820 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		F37090BD2316D09C009A2820 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				F37090B72316CEB1009A2820 /* MenuItem.swift */,
 				F37090B92316CFBE009A2820 /* IntermediateModels.swift */,
 				F37090BB2316D024009A2820 /* Order.swift */,
+				F37090BD2316D09C009A2820 /* MenuController.swift */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37090BE2316D09C009A2820 /* MenuController.swift in Sources */,
 				F37090B82316CEB1009A2820 /* MenuItem.swift in Sources */,
 				F37090B62316CE3A009A2820 /* MenuItemViewController.swift in Sources */,
 				F37090BA2316CFBE009A2820 /* IntermediateModels.swift in Sources */,
