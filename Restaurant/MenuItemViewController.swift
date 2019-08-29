@@ -26,9 +26,17 @@ class MenuItemViewController: UIViewController {
     }
     
     func updateUI() {
+        guard let menuItem = menuItem else {return}
         titleLabel.text = menuItem.name
         priceLabel.text = String(format: "$%.2f", menuItem.price)
         detailTextLabel.text = menuItem.detailText
+//        MenuController.shared.fetchImage(url: menuItem.imageURL) {
+//            (image) in
+//            guard let image = image else {return}
+//            DispatchQueue.main.async {
+//                self.imageView.image = image
+//            }
+//        }
     }
     
     @IBAction func addToOrderButtonTapped(_ sender: UIButton) {
@@ -38,6 +46,19 @@ class MenuItemViewController: UIViewController {
         }
         
         MenuController.shared.order.menuItems.append(menuItem)
+    }
+    
+    override func encodeRestorableState(with coder: NSCoder) {
+        
+        super.encodeRestorableState(with: coder)
+        guard let menuItem = menuItem else {return}
+        coder.encode(menuItem.id, forKey: "menuItemId")
+    }
+    
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
+        let menuItemID = Int(coder.decodeInt32(forKey: "menuItemId"))
+        updateUI()
     }
     
     /*
